@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconhecimento</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <div class="TextoC">
+        <ul>
+            <p>O reconhecimento (recon) de vulnerabilidades é a fase inicial e fundamental em testes de intrusão (pentest) e programas de bug bounty, focada em coletar inteligência para mapear a superfície de ataque e identificar alvos prioritários. Esta etapa envolve o mapeamento da infraestrutura, coleta de dados públicos e detecção de falhas potenciais antes de um ataque real.</p>
+            <p>1. Fases Fundamentais do Recon TécnicoO processo divide-se em duas abordagens principais para descobrir portas de entrada: Recon PassivoInteligência de Fontes Abertas (OSINT): Coleta de dados públicos sem tocar diretamente nos servidores da vítima. Histórico de DNS: Uso de plataformas como SecurityTrails para rastrear registros antigos de IPs. Motores de Busca de Dispositivos: Varreduras em Shodan, Censys ou Zoomeye para localizar servidores expostos. Certificados SSL/TLS: Análise do Crt.sh para listar subdomínios via transparência de certificados.</p>
+            <p>2. Recon Ativo: Mapeamento de Portas: Varredura direta de portas de rede para descobrir serviços ativos. Spidering e Crawling: Varredura automatizada para indexar páginas, diretórios ocultos e arquivos JavaScript. Fuzzing de Diretórios: Testes massivos de caminhos HTTP para encontrar painéis administrativos esquecidos.</p>
+        </ul>
+    
+
+    <table>
+        <tr>
+            <th> Categoria</th>
+            <th>Ferramenta</th>
+            <th>Função Principal</th>
+        </tr>
+
+        <tr>
+        <td>Enumeração De Subdomínios</td>
+        <td>Subfinder/Amass</td>
+        <td>Localizam domínios secundários e infraestruturas associadas.</td>
+       </tr>
+
+       <tr>
+        <td>Sondagem HTTP</td>
+        <td>Httpx</td>
+        <td>Valida quais subdomínios encontrados estão realmente online.</td>
+       </tr>
+
+       <tr>
+        <td>Mapeamento de Redes</td>
+        <td>Nmap</td>
+        <td>Identifica portas abertas, sistemas operacionais e serviços.</td>
+       </tr>
+
+       <tr>
+        <td>Varredura Web automatizada</td>
+        <td>Nuclei</td>
+        <td>Dispara templates comunitários focados em falhas conhecidas (CVEs).</td>
+       </tr>
+
+       <tr>
+        <td>Fuzzing de Rotas</td>
+        <td>Feroxbuster / Ffuf</td>
+        <td>Descobrem diretórios ocultos por meio de ataques de dicionário (wordlists).</td>
+       </tr>
+    </table>
+
+    <p> 3. Integração com Análise de Vulnerabilidades: Os dados agregados durante o Recon alimentam diretamente os motores de análise técnica: Detecção de Shadow IT: Localização de infraestruturas abandonadas ou não homologadas que não possuem correções aplicadas. Mapeamento Baseado em Código: Cruzamento de serviços desatualizados identificados no Recon com vulnerabilidades registradas no banco de dados do CWE e da base do CVE. Priorização Técnica: Classificação do risco bruto usando a pontuação do CVSS balanceado com a probabilidade real de exploração (EPSS).</p>
+    </div>
+    <img src="https://blog.solyd.com.br/wp-content/uploads/2025/07/o-e-recon-ng.jpg" alt="">
+</body>
+</html>
